@@ -35,4 +35,4 @@ require __DIR__.'/auth.php';
 Route::get('/notification', [UserController::class, 'notification'])->name('notification');
 Route::get('/new-user-register', [UserController::class, 'index'])->name('new.user.register');
 Route::get('/users', [UserController::class, 'users'])->name('users');
-Route::get('/show/user/', [UserController::class, 'show'])->name('show');
+Route::get('/show/user/{id}', [UserController::class, 'show'])->name('show');

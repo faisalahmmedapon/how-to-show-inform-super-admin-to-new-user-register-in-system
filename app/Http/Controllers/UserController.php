@@ -56,7 +56,13 @@ class UserController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $user = User::find($id);
+        $user->status = 'read';
+        $user->save();
+        return redirect()->back();
+        // return response()->json([
+        //     'user' => $user,
+        // ]);
     }
 
     /**
